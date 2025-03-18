@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
+          // Virtual assistant picture
           Stack(
             children: [
               Center(
@@ -43,6 +44,49 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+          // Chat bubble
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            margin: const EdgeInsets.symmetric(
+              horizontal: 40,
+            ).copyWith(top: 30),
+            decoration: BoxDecoration(
+              border: Border.all(color: Pallete.borderColor),
+              borderRadius: BorderRadius.circular(
+                20,
+              ).copyWith(topLeft: Radius.zero),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Text(
+                'Hello! How can I help you today?',
+                style: TextStyle(
+                  color: Pallete.mainFontColor,
+                  fontSize: 25,
+                  fontFamily: 'Cera Pro',
+                ),
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: const EdgeInsets.only(top: 10, left: 22),
+            child: const Text(
+              'Here are a few suggestions',
+              style: TextStyle(
+                fontFamily: 'Cera Pro',
+                color: Pallete.mainFontColor,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          // Feature list
+          Column( 
+            children: [
+              
+            ]
+          )
         ],
       ),
     );
