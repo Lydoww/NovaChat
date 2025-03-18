@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nova/feature_box.dart';
 import 'package:nova/pallete.dart';
 
 class HomePage extends StatefulWidget {
@@ -82,11 +83,16 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           // Feature list
-          Column( 
+          Column(
             children: [
-              
-            ]
-          )
+              FeatureBox(
+                color: Pallete.firstSuggestionBoxColor,
+                headerText: 'ChatGPT',
+                descriptionText:
+                    'A smarter way to stay organized and informed with ChatGPT.',
+              ),
+            ],
+          ),
         ],
       ),
     );
