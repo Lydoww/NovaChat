@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Nova',
-      theme: ThemeData.light().copyWith(),
+      theme: ThemeData.light(
+        useMaterial3: true,
+      ).copyWith(scaffoldBackgroundColor: Colors.white),
       home: const HomePage(),
     );
   }
